@@ -20,7 +20,6 @@ Reviewed on smoreasia.com in October 2026 (a Wix site):
 - **Not built for phones.** Phones get the 980px desktop layout shrunk down, so body text is tiny and the dish cards cut their descriptions off mid-sentence.
 - **No menu to browse.** The only menu is inside the Wix ordering widget. There's no page to read before visiting.
 - **Template leftovers.** The footer says "© 2035 by Sai Mai". The Facebook, Instagram and X icons link to Wix's own accounts, not @smoreasia.
-- **Old branding in links.** "Order For Delivery" still points to the Deliveroo listing for *Oisoi Royal Wharf*.
 - **Broken pages.** `/gift-card` and `/terms-condition` show up in search results but return 404.
 - **Hours and contact details only appear in the footer.** Nothing shows whether the restaurant is open right now.
 
