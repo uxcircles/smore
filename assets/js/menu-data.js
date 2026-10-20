@@ -37,9 +37,9 @@ window.SMORE_MENU = [
         desc: "Tofu and mooli simmered in a rich savoury sauce, with marinated egg and greens." },
       { name: "Japanese Beef Bento", zh: "日式肥牛丼", price: 13.5, img: "japanese-beef-bento",
         desc: "Thin-sliced beef simmered in a sweet soy sauce, with marinated egg, tofu and greens." },
-      { name: "Sweet & Sour Chicken Bento", zh: "粤式咕咾雞便當", price: 13.5, img: "sweet-sour-chicken-bento",
+      { name: "Sweet & Sour Chicken Bento", zh: "粵式咕咾雞便當", price: 13.5, img: "sweet-sour-chicken-bento",
         desc: "Crispy battered chicken in our sweet and sour sauce, with marinated egg, tofu and greens." },
-      { name: "Sweet & Sour King Prawn Bento", zh: "粤式咕咾蝦便當", price: 14.5,
+      { name: "Sweet & Sour King Prawn Bento", zh: "粵式咕咾蝦便當", price: 14.5,
         desc: "Battered king prawns in house sweet and sour sauce, with cabbage, egg, tofu and greens." },
       { name: "Crispy Soy Glazed Fish Bento", zh: "香脆紅魚便當", price: 16.5, img: "soy-fish-bento",
         desc: "Crispy fish fillets in a sweet soy glaze, with marinated egg, tofu and greens." }
