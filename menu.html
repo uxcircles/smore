@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Menu · S'MORE Taste of Asia</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="Bentos, set menus, Taiwanese street snacks, desserts and teahouse drinks, with prices.">
+  <meta name="theme-color" content="#fbf9f5">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/img/seal-teahouse.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Instrument+Sans:wght@400;500;600&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="concept-bar">Unofficial redesign concept by <a href="https://ux-circles.com/web" target="_blank" rel="noopener">UX CIRCLES</a>. The real site is <a href="https://www.smoreasia.com" target="_blank" rel="noopener">smoreasia.com</a>.</div>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="index.html"><img src="assets/img/logo-ink.png" alt="S'MORE Taste of Asia" width="932" height="362"></a>
+    <nav class="main-nav" aria-label="Main">
+        <a href="menu.html" aria-current="page">Menu</a>
+        <a href="our-story.html">Our story</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn--ghost" href="https://www.smoreasia.com/order-online" target="_blank" rel="noopener">Order online</a>
+      <a class="btn btn--red" href="reservations.html">Book a table</a>
+    </div>
+    <button class="nav-toggle" type="button" data-nav-open aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button>
+  </div>
+</header>
+<div class="mobile-nav" id="mobile-nav" hidden>
+  <div class="mobile-nav__top">
+    <img src="assets/img/logo-paper.png" alt="S'MORE Taste of Asia" width="932" height="362">
+    <button class="nav-toggle" type="button" data-nav-close aria-label="Close menu"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
+  </div>
+  <nav aria-label="Mobile">
+    <ul>
+      <li><a href="index.html">Home <span lang="zh-Hant">首頁</span></a></li>
+      <li><a href="menu.html" aria-current="page">Menu <span lang="zh-Hant">菜單</span></a></li>
+      <li><a href="our-story.html">Our story <span lang="zh-Hant">故事</span></a></li>
+      <li><a href="contact.html">Contact <span lang="zh-Hant">聯絡</span></a></li>
+      <li><a href="reservations.html">Book a table <span lang="zh-Hant">訂位</span></a></li>
+    </ul>
+  </nav>
+  <a class="btn btn--light" href="https://www.smoreasia.com/order-online" target="_blank" rel="noopener">Order online for pickup</a>
+  <p class="mobile-nav__info">18 Royal Crest Avenue, London E16 2PR<br>020 8137 7098 · info@smoreasia.com</p>
+</div>
+<main>
+  <section class="page-head">
+    <div class="wrap page-head__grid">
+      <span class="seal" lang="zh-Hant" aria-hidden="true">菜單</span>
+      <div class="page-head__text">
+        <p class="eyebrow">Menu</p>
+        <h1 class="display display--xl">Eat like you're in Taipei</h1>
+        <p class="lede">Bentos, set menus, street snacks, desserts and hand-shaken tea. Eat in, or order online for pickup in about 20 minutes.</p>
+      </div>
+    </div>
+  </section>
+  <nav class="menu-nav" aria-label="Menu sections">
+    <div class="wrap menu-nav__inner">
+      <a class="chip" href="#sets" aria-current="true">Sets <span lang="zh-Hant">套餐</span></a>
+      <a class="chip" href="#bento" aria-current="false">Bento <span lang="zh-Hant">便當</span></a>
+      <a class="chip" href="#one-bite" aria-current="false">One Bite <span lang="zh-Hant">小食</span></a>
+      <a class="chip" href="#sweet" aria-current="false">Desserts <span lang="zh-Hant">甜品</span></a>
+      <a class="chip" href="#drinks" aria-current="false">Teahouse <span lang="zh-Hant">茶館</span></a>
+    </div>
+  </nav>
+  <div id="menu-root">
+    <div class="wrap menu-cat"><p>Loading the menu…</p></div>
+  </div>
+  <div class="wrap"><p class="menu-note">(V) vegetarian. Prices as listed on smoreasia.com in October 2026. Please tell us about any allergies when you order.</p></div>
+  <section class="order-cta" aria-label="Order">
+    <div class="wrap order-cta__inner">
+      <div>
+        <h2 class="display display--md">Hungry now?</h2>
+        <p>Pickup from 18 Royal Crest Avenue, usually ready in 20 minutes.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--red" href="https://www.smoreasia.com/order-online" target="_blank" rel="noopener">Order for pickup</a>
+        <a class="btn btn--light" href="https://deliveroo.co.uk/menu/london/canning-town/oisoi-royal-wharf" target="_blank" rel="noopener">Delivery on Deliveroo</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img class="logo-img" src="assets/img/logo-paper.png" alt="S'MORE Taste of Asia" width="932" height="362">
+        <p>Taiwanese comfort food, bentos and teahouse drinks in the Royal Docks.</p>
+        <img class="footer-seal" src="assets/img/seal-teahouse.png" alt="人文茶館 teahouse seal" width="240" height="240">
+      </div>
+      <div>
+        <h2>Visit</h2>
+        <ul>
+          <li>Flagship House<br>18 Royal Crest Avenue<br>London E16 2PR</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=S%27MORE+Taste+of+Asia%2C+18+Royal+Crest+Avenue%2C+London+E16+2PR" target="_blank" rel="noopener">Get directions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Opening hours</h2>
+        <ul class="footer-hours">
+          <li><span>Mon–Fri</span>12pm–3pm, 5pm–9pm</li>
+          <li><span>Sat–Sun</span>12pm–9pm</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="tel:+442081377098">020 8137 7098</a></li>
+          <li><a href="mailto:info@smoreasia.com">info@smoreasia.com</a></li>
+          <li><a href="https://www.instagram.com/smoreasia/" target="_blank" rel="noopener">Instagram @smoreasia</a></li>
+          <li><a href="https://deliveroo.co.uk/menu/london/canning-town/oisoi-royal-wharf" target="_blank" rel="noopener">Delivery on Deliveroo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© S'MORE Taste of Asia. Photos from smoreasia.com.</span>
+      <span>Unofficial redesign concept by <a href="https://ux-circles.com/web" target="_blank" rel="noopener">UX CIRCLES</a></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/menu-data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Book a table · S'MORE Taste of Asia</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="Reserve a table at S'MORE Taste of Asia, 18 Royal Crest Avenue, London E16 2PR.">
+  <meta name="theme-color" content="#fbf9f5">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/img/seal-teahouse.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Instrument+Sans:wght@400;500;600&family=Noto+Serif+TC:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="concept-bar">Unofficial redesign concept by <a href="https://ux-circles.com/web" target="_blank" rel="noopener">UX CIRCLES</a>. The real site is <a href="https://www.smoreasia.com" target="_blank" rel="noopener">smoreasia.com</a>.</div>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="index.html"><img src="assets/img/logo-ink.png" alt="S'MORE Taste of Asia" width="932" height="362"></a>
+    <nav class="main-nav" aria-label="Main">
+        <a href="menu.html">Menu</a>
+        <a href="our-story.html">Our story</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn--ghost" href="https://www.smoreasia.com/order-online" target="_blank" rel="noopener">Order online</a>
+      <a class="btn btn--red" href="reservations.html">Book a table</a>
+    </div>
+    <button class="nav-toggle" type="button" data-nav-open aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button>
+  </div>
+</header>
+<div class="mobile-nav" id="mobile-nav" hidden>
+  <div class="mobile-nav__top">
+    <img src="assets/img/logo-paper.png" alt="S'MORE Taste of Asia" width="932" height="362">
+    <button class="nav-toggle" type="button" data-nav-close aria-label="Close menu"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15"/></svg></button>
+  </div>
+  <nav aria-label="Mobile">
+    <ul>
+      <li><a href="index.html">Home <span lang="zh-Hant">首頁</span></a></li>
+      <li><a href="menu.html">Menu <span lang="zh-Hant">菜單</span></a></li>
+      <li><a href="our-story.html">Our story <span lang="zh-Hant">故事</span></a></li>
+      <li><a href="contact.html">Contact <span lang="zh-Hant">聯絡</span></a></li>
+      <li><a href="reservations.html" aria-current="page">Book a table <span lang="zh-Hant">訂位</span></a></li>
+    </ul>
+  </nav>
+  <a class="btn btn--light" href="https://www.smoreasia.com/order-online" target="_blank" rel="noopener">Order online for pickup</a>
+  <p class="mobile-nav__info">18 Royal Crest Avenue, London E16 2PR<br>020 8137 7098 · info@smoreasia.com</p>
+</div>
+<main>
+  <section class="page-head">
+    <div class="wrap page-head__grid">
+      <span class="seal" lang="zh-Hant" aria-hidden="true">訂位</span>
+      <div class="page-head__text">
+        <p class="eyebrow">Reservations</p>
+        <h1 class="display display--xl">Book a table</h1>
+        <p class="lede">Choose your party size, date and time. For 9 or more, or to hire the restaurant, <a href="contact.html#enquire">send us an enquiry</a>.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:clamp(32px,5vw,56px)">
+    <div class="wrap form-layout">
+      <div>
+        <form class="form-card" id="booking-form" data-concept="booking-done" novalidate>
+          <fieldset class="party field field--full">
+            <legend>Party size</legend>
+            <label for="p1"><input type="radio" name="party" id="p1" value="1">1</label>
+            <label for="p2"><input type="radio" name="party" id="p2" value="2" checked>2</label>
+            <label for="p3"><input type="radio" name="party" id="p3" value="3">3</label>
+            <label for="p4"><input type="radio" name="party" id="p4" value="4">4</label>
+            <label for="p5"><input type="radio" name="party" id="p5" value="5">5</label>
+            <label for="p6"><input type="radio" name="party" id="p6" value="6">6</label>
+            <label for="p7"><input type="radio" name="party" id="p7" value="7">7</label>
+            <label for="p8"><input type="radio" name="party" id="p8" value="8">8</label>
+          </fieldset>
+          <div class="field">
+            <label for="b-date">Date</label>
+            <input type="date" id="b-date" name="date" required>
+          </div>
+          <div class="field field--full">
+            <span class="field__label" style="font-family:var(--font-display);font-weight:600;font-size:.86rem">Time</span>
+            <div class="slots" id="b-slots" role="group" aria-label="Available times"></div>
+            <span class="field__hint">Weekdays we seat for lunch from 12pm and dinner from 5pm. Weekends we are open all day.</span>
+          </div>
+          <div class="form-grid">
+            <div class="field"><label for="b-name">Name</label><input id="b-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="b-phone">Mobile number</label><input id="b-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="field field--full"><label for="b-email">Email</label><input id="b-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field field--full"><label for="b-notes">Anything we should know? <span class="field__hint">(optional)</span></label><textarea id="b-notes" name="notes" placeholder="Allergies, a high chair, a birthday…"></textarea></div>
+          </div>
+          <button class="btn btn--red" type="submit">Request booking</button>
+        </form>
+        <div class="form-done" id="booking-done" tabindex="-1" hidden>
+          <h2>Request received</h2>
+          <p data-summary></p>
+          <p>This is a design concept, so no booking was made. To book for real, call 020 8137 7098 or use smoreasia.com.</p>
+        </div>
+      </div>
+      <aside class="aside">
+        <div>
+          <h2>Opening hours</h2>
+          <table class="hours"><caption class="sr-only">Opening hours</caption>
+          <tr data-days="1 2 3 4 5"><th scope="row">Monday to Friday</th><td>12pm–3pm<br>5pm–9pm</td></tr>
+          <tr data-days="0 6"><th scope="row">Saturday and Sunday</th><td>12pm–9pm</td></tr>
+          </table>
+        </div>
+        <div>
+          <h2>Find us</h2>
+          <dl class="contact-list">
+            <div><dt>Address</dt><dd>Flagship House, 18 Royal Crest Avenue, London E16 2PR</dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+442081377098">020 8137 7098</a></dd></div>
+          </dl>
+        </div>
+        <figure class="review" style="border-top-color:var(--stone-2)">
+          <blockquote style="font-size:1.1rem">“As Taiwanese, I can say that this restaurant offers authentic Taiwanese food. Loved every bite.”</blockquote>
+          <figcaption>Kevin C.</figcaption>
+        </figure>
+      </aside>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img class="logo-img" src="assets/img/logo-paper.png" alt="S'MORE Taste of Asia" width="932" height="362">
+        <p>Taiwanese comfort food, bentos and teahouse drinks in the Royal Docks.</p>
+        <img class="footer-seal" src="assets/img/seal-teahouse.png" alt="人文茶館 teahouse seal" width="240" height="240">
+      </div>
+      <div>
+        <h2>Visit</h2>
+        <ul>
+          <li>Flagship House<br>18 Royal Crest Avenue<br>London E16 2PR</li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=S%27MORE+Taste+of+Asia%2C+18+Royal+Crest+Avenue%2C+London+E16+2PR" target="_blank" rel="noopener">Get directions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Opening hours</h2>
+        <ul class="footer-hours">
+          <li><span>Mon–Fri</span>12pm–3pm, 5pm–9pm</li>
+          <li><span>Sat–Sun</span>12pm–9pm</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="tel:+442081377098">020 8137 7098</a></li>
+          <li><a href="mailto:info@smoreasia.com">info@smoreasia.com</a></li>
+          <li><a href="https://www.instagram.com/smoreasia/" target="_blank" rel="noopener">Instagram @smoreasia</a></li>
+          <li><a href="https://deliveroo.co.uk/menu/london/canning-town/oisoi-royal-wharf" target="_blank" rel="noopener">Delivery on Deliveroo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© S'MORE Taste of Asia. Photos from smoreasia.com.</span>
+      <span>Unofficial redesign concept by <a href="https://ux-circles.com/web" target="_blank" rel="noopener">UX CIRCLES</a></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
