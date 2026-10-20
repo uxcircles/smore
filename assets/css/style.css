@@ -209,6 +209,9 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .mobile-nav li a span { font-family: var(--font-han); font-size: 1rem; color: var(--on-ink-muted); font-weight: 700; }
 .mobile-nav__info { color: var(--on-ink-muted); font-size: 0.95rem; margin-top: auto; }
 
+/* Phone-only action bar, always within thumb reach */
+.mobile-cta { display: none; }
+
 /* ---------- Open-now pill ---------- */
 
 .status {
@@ -559,6 +562,18 @@ a.strip__value:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 900px) {
   .main-nav, .header-actions { display: none; }
   .nav-toggle { display: inline-flex; }
+  .mobile-cta {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 55;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    padding-top: 10px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    padding-left: var(--gutter-l); padding-right: var(--gutter-r);
+    background: color-mix(in srgb, var(--porcelain) 96%, transparent);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--line);
+  }
+  .mobile-cta .btn { min-height: 46px; }
+  body { padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px)); }
   .site-header__inner { min-height: 66px; }
   .logo img { width: 96px; }
   .menu-nav { top: calc(env(safe-area-inset-top, 0px) + 67px); }
