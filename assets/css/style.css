@@ -155,13 +155,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
   padding: 2px 8px; border: 1px solid rgba(244, 238, 228, 0.4); border-radius: 99px;
   font-size: 0.6875rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--on-ink);
 }
-.concept-bar .concept-short { display: none; }
 .concept-bar a { display: inline-flex; align-items: center; gap: 4px; color: var(--on-ink); text-decoration: none; white-space: nowrap; }
 .concept-bar a:hover strong { text-decoration: underline; text-underline-offset: 3px; }
 .concept-bar a.concept-official { display: inline; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(244, 238, 228, 0.5); }
 .concept-bar a.concept-official:hover { text-decoration-color: currentColor; }
-@media (max-width: 640px) { .concept-long { display: none; } .concept-bar .concept-short { display: inline-flex; } }
-@media (max-width: 420px) { .concept-by { display: none; } }
+@media (max-width: 640px) { .concept-long { display: none; } }
 
 .site-header {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
