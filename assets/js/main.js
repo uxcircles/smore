@@ -146,7 +146,10 @@
     dateInput.max = iso(max);
     if (!dateInput.value) dateInput.value = iso(today);
 
-    // Last seating 60 minutes before each session closes.
+    // Online booking windows, 15-minute slots and 10 minutes' notice,
+    // matching the restaurant's Wix Table Reservations settings.
+    var BOOK_WEEKDAY = [[12 * 60, 14 * 60 + 15], [17 * 60, 20 * 60 + 30]];
+    var BOOK_WEEKEND = [[12 * 60, 20 * 60 + 30]];
     function renderSlots() {
       var parts = dateInput.value.split("-");
       if (parts.length !== 3) { slotBox.innerHTML = ""; return; }
@@ -154,9 +157,10 @@
       var now = londonNow();
       var isToday = iso(d) === iso(today);
       var html = "";
-      sessionsFor(d.getDay()).forEach(function (s) {
-        for (var t = s[0]; t <= s[1] - 60; t += 30) {
-          if (isToday && t <= now.mins + 30) continue;
+      var day = d.getDay();
+      (day === 0 || day === 6 ? BOOK_WEEKEND : BOOK_WEEKDAY).forEach(function (s) {
+        for (var t = s[0]; t <= s[1]; t += 15) {
+          if (isToday && t < now.mins + 10) continue;
           var id = "slot-" + t;
           html += '<label for="' + id + '"><input type="radio" name="time" id="' + id + '" value="' + fmt(t) + '" required>' + fmt(t) + "</label>";
         }
@@ -165,6 +169,14 @@
       return !!html;
     }
     dateInput.addEventListener("change", renderSlots);
+    var deposit = booking.querySelector("#b-deposit");
+    function renderDeposit() {
+      var n = +(booking.querySelector('input[name="party"]:checked') || {}).value || 0;
+      deposit.hidden = n < 10;
+      deposit.textContent = "Groups of 10 pay a deposit of £10 per guest (£" + n * 10 + ") to confirm.";
+    }
+    booking.querySelectorAll('input[name="party"]').forEach(function (r) { r.addEventListener("change", renderDeposit); });
+    renderDeposit();
     // Late in the day, start on tomorrow instead of an empty list.
     if (!renderSlots() && dateInput.value === iso(today)) {
       var next = new Date(today); next.setDate(next.getDate() + 1);
