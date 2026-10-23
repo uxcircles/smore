@@ -12,16 +12,7 @@ python3 .claude/serve.py
 
 Then open http://localhost:5178. (Any static file server works; this one just disables caching.)
 
-## What this fixes on the current site
-
-Reviewed on smoreasia.com in October 2026 (a Wix site):
-
-- **Navigation can't be read on desktop.** Dark green menu links sit on the red header.
-- **Phone layout hides the basics.** On a phone (Wix's separate mobile layout), the red banner covers the S'MORE logo and there's no Book or Order button on the first screen. The newsletter button and footer text are dark red on red.
-- **No menu to browse.** The only menu is inside the Wix ordering widget. There's no page to read before visiting.
-- **Template leftovers.** The footer says "© 2035 by Sai Mai". On desktop, the Facebook, Instagram and X icons link to Wix's own accounts, not @smoreasia.
-- **Broken pages.** `/gift-card` and `/terms-condition` show up in search results but return 404.
-- **Hours and contact details only appear in the footer.** Nothing shows whether the restaurant is open right now.
+## What the redesign adds
 
 The redesign keeps the brand's red and the restaurant's own photography, and adds:
 
@@ -49,3 +40,15 @@ assets/img/              photos and logo
 - Order online links go to the restaurant's existing Wix ordering page.
 - Photos and logo belong to S'MORE Taste of Asia (from smoreasia.com).
 - Fonts: Archivo, Instrument Sans and Noto Serif TC, all under the SIL Open Font License.
+
+## Internal notes
+
+The review of the current site, the items to confirm with the client and the pitch material are kept locally in `.private/` (git-ignored, never committed).
+
+After cloning, enable the git hooks:
+
+```
+git config core.hooksPath .githooks
+```
+
+Commits and pushes are then blocked if they include `.private/` or a phrase from `.private/blocklist.txt`, and the open to-dos in `.private/NOTES.md` are printed. To see them any time: `sh .githooks/remind.sh`
